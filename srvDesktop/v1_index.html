@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='v1_srvDesktop.js'></script>
+  <link rel='stylesheet' href='v1_srvDesktop.css'>
+</head>
+<body>
+  <div id="srvDesktopViewport">
+    <div id="srvDesktopTitle"></div>
+    <div id="srvDesktopWorkspace">
+      <div class="srvDesktopPage" id="desktop_provider_fails" data-name="Provider"></div>
+      <div class="srvDesktopPage" id="desktop_mail" data-name="Mail"></div>
+      <div class="srvDesktopPage" id="desktop_firewall" data-name="Firewall"></div>
+    </div>
+    <div id="srvDesktopArrowLeft"> &#10094; </div>
+    <div id="srvDesktopArrowRight"> &#10095; </div>
+    <div id="srvDesktopDots"></div>
+  </div>
+  <script>
+    window.addEventListener("load", async () =>{
+      const desktop=new srvDesktop({
+        animation:350,
+        arrows:true,
+        keyboard:true,
+        drag:true,
+        scaleEffect:true
+    });
+  </script>
+</body>
+</html>
