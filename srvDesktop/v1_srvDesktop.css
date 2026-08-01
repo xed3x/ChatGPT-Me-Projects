@@ -1,0 +1,115 @@
+#srvDesktopViewport{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  user-select:none;
+  cursor:grab;
+  touch-action: none;
+}
+#srvDesktopViewport:active{
+  cursor:grabbing;
+}
+#srvDesktopWorkspace{
+  display:flex;
+  width:100%;
+  height:100%;
+  transition:transform .55s cubic-bezier(.18,.92,.18,1.02);
+  will-change:transform;
+}
+.srvDesktopPage{
+  width:100vw;
+  height:100vh;
+  flex-shrink:0;
+  box-sizing:border-box;
+  padding:25px;
+  transition:transform .35s,border-radius .35s,box-shadow .35s;
+  overflow:hidden;
+}
+#srvDesktopTitle{
+  position:absolute;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  z-index:6000;
+  pointer-events:none;
+}
+#desktop_provider_fails{
+  background:#2d3748;
+  color:white;
+}
+#desktop_mail{
+  background:#4a5568;
+  color:white;
+}
+#desktop_firewall{
+  background:#2b6cb0;
+  color:white;
+}
+#desktop_3{
+  background:#2f855a;
+  color:white;
+}
+#srvDesktopArrowLeft, #srvDesktopArrowRight{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  font-size:28px;
+  background:rgba(0,0,0,.25);
+  color:white;
+  backdrop-filter:blur(8px);
+  transition:.2s;
+  opacity:.45;
+  z-index:5000;
+}
+#srvDesktopArrowLeft{
+  left:20px;
+}
+#srvDesktopArrowRight{
+  right:20px;
+}
+#srvDesktopArrowLeft:hover, #srvDesktopArrowRight:hover{
+  opacity:1;
+  backdrop-filter:blur(18px);
+  transform:translateY(-50%) scale(1.15);
+  background:rgba(255,255,255,.20);
+}
+#srvDesktopDots{
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:12px;
+}
+.srvDesktopDot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:rgba(255,255,255,.35);
+  transition:.25s;
+  cursor: pointer;
+  transition:
+    background .25s,
+    transform .25s,
+    border-color .25s,
+    box-shadow .25s;
+}
+.srvDesktopDot.active{
+  background:white;
+  transform:scale(1.4);
+}
+.srvDesktopDot:hover{
+  transform:scale(1.15);
+  border-color:#fff;
+}
