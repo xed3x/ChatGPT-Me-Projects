@@ -11,7 +11,7 @@ GIFs with: ShareX
 -->
 ### Folder: python_stuff
 -- v1 -- audio_to_text_for_pi.py: Small version for an Raspberry Pi 3 with 1GB RAM to convert an audio mp3 file to an wav + get the text out of it
-#### ToDos
+</br><b>ToDos</b>
 </br>  apt install python3-pip python3-full python3-venv ffmpeg
 </br>  python3 -m venv whisper-env
 </br>  source whisper-env/bin/activate
